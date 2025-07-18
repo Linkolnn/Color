@@ -1,15 +1,13 @@
 import { defineConfig } from 'vite'
-import pugStatic from '@macropygia/vite-plugin-pug-static'
+import pugPlugin from 'vite-plugin-pug'
 
 export default defineConfig({
   plugins: [
-    pugStatic({
-      buildOptions: {
-        basedir: './src',
-      },
-      buildLocals: {
-        // любые локальные переменные для Pug
-      },
-    }),
+    pugPlugin({
+      pretty: true
+    })
   ],
+  build: {
+    outDir: 'dist'
+  }
 })
