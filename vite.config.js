@@ -9,8 +9,4 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, 'src/styles'), 
     },
   },
-  publicDir: 'public',
-  build: {
-    outDir: 'dist', // Default output directory
-  },
 });
