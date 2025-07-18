@@ -1,5 +1,5 @@
-import { fetchProducts } from '@api.js';
-import { addToCart } from '@cart.js';
+import { fetchProducts } from '@js/api.js';
+import { addToCart } from '@js/cart.js';
 
 export const renderProducts = async (containerSelector = '.products__block') => {
   try {

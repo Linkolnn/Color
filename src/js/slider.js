@@ -1,4 +1,4 @@
-import { fetchSliderData } from '@api.js';
+import { fetchSliderData } from '@js/api.js';
 
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
