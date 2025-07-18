@@ -1,5 +1,5 @@
-const PRODUCTS_API_URL = 'https://6877ae0edba809d901f07a0a.mockapi.io/ProductList';
-const SLIDER_API_URL = 'https://6877ae0edba809d901f07a0a.mockapi.io/slider';
+const PRODUCTS_API_URL = import.meta.env.VITE_PRODUCTS_API_URL;
+const SLIDER_API_URL = import.meta.env.VITE_SLIDER_API_URL;
 
 export const fetchProducts = async () => {
   try {
