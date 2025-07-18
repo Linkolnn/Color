@@ -47,7 +47,7 @@ export const renderProducts = async (containerSelector = '.products__block') => 
           <div class="product-card__price-button-block">
             <div class="product-card__price">${formatPrice(product.price)}</div>
             <button class="product-card__button" aria-label="Добавить в корзину" data-product-id="${product.id}">
-              <img class="product-card__button-icons" src="/public/icons/plus.svg" alt="Добавить в корзину">
+              <img class="product-card__button-icons" src="/icons/plus.svg" alt="Добавить в корзину">
             </button>
           </div>
         </div>
