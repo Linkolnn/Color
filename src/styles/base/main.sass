@@ -1,0 +1,33 @@
+@import './variables'
+@import './mixin'
+@import '../components/header'
+@import '../components/toggleFilter'
+@import '../components/productCard'
+@import '../components/filterSelect'
+@import '../components/cart'
+@import '../components/slider'
+
+*
+    border: none
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    list-style: none
+    text-decoration: none
+
+body
+    font-family: 'Inter', sans-serif
+
+#app 
+    margin: 0 auto
+    max-width: 1920px
+
+.footer
+    background-color: $primary-color
+    height: 312px
+    @include mobile
+        height: 204px
+
+    
+    
+    

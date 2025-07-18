@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title COLORS - Краски
+    body
+        include ../components/header.pug
+
+        main.main
+            section.breadcrumb
+                ul.breadcrumb__list
+                    li.breadcrumb__item
+                        a.breadcrumb__link(href="/") ГЛАВНАЯ
+                    li.breadcrumb__item
+                        a.breadcrumb__link(href="/products") ПРОДУКТЫ
+                    li.breadcrumb__item КРАСКИ
+                h1.breadcrumb__title Краски
+
+            section.slider__section.section
+                .slider__container
+
+            section.products__section.section
+                aside.products__aside
+                    include ../components/toggleFilter.pug
+                .products__container
+                    .products__filter-block
+                        p.products__counter
+                            span.products__count-number 0 товаров
+                        button.products__filter-btn.mobile-only Фильтры
+                    .products__block
+        
+        include ../components/footer.pug
+    script(type="module" src="/src/main.js")

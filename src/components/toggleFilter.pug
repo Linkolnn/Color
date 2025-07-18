@@ -1,0 +1,29 @@
+.toggle-filter
+  .toggle-filter__drag-handle
+    img.toggle-filter__drag-icons(src="./src/assets/icons/dragLine.svg", alt="")
+  .toggle-filter__list
+    .toggle-filter__item
+      label.toggle-filter__switch
+        input.toggle-filter__checkbox(type="checkbox" id="filter-new")
+        span.toggle-filter__slider
+      label.toggle-filter__label(for="filter-new") Новинки
+    .toggle-filter__item
+      label.toggle-filter__switch
+        input.toggle-filter__checkbox(type="checkbox" id="filter-available")
+        span.toggle-filter__slider
+      label.toggle-filter__label(for="filter-available") Есть в наличии
+    .toggle-filter__item
+      label.toggle-filter__switch
+        input.toggle-filter__checkbox(type="checkbox" id="filter-contract")
+        span.toggle-filter__slider
+      label.toggle-filter__label(for="filter-contract") Контрактные
+    .toggle-filter__item
+      label.toggle-filter__switch
+        input.toggle-filter__checkbox(type="checkbox" id="filter-exclusive")
+        span.toggle-filter__slider
+      label.toggle-filter__label(for="filter-exclusive") Эксклюзивные
+    .toggle-filter__item
+      label.toggle-filter__switch
+        input.toggle-filter__checkbox(type="checkbox" id="filter-sale")
+        span.toggle-filter__slider
+      label.toggle-filter__label(for="filter-sale") Распродажа

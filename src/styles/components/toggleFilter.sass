@@ -1,0 +1,180 @@
+.toggle-filter
+  background: $secondary-color
+  padding: 20px
+  border-radius: 8px
+  
+  @include tablet
+    position: sticky
+    top: 20px
+    width: 100%
+    max-width: 100%
+    height: auto
+    transform: none
+    transition: none
+  
+  @include mobile
+    position: fixed
+    top: unset
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 40vh
+    z-index: 1000
+    border-radius: 16px 16px 0 0
+    transform: translateY(100%)
+    transition: transform 0.3s ease
+    overflow-y: auto
+    padding-bottom: 30px
+    display: block
+    
+    &--active
+      transform: translateY(0)
+  
+  &__drag-handle
+    display: none
+    
+    @include mobile
+      display: flex
+      justify-content: center
+      height: 6px
+      border-radius: 6px
+      padding: 0px 20px 20px
+      cursor: grab
+      position: relative
+      flex-shrink: 0
+      
+      &:active
+        cursor: grabbing
+        
+      &:hover
+        background-color: #9ca3af
+  
+  &__drag-icons
+    width: 28px
+    height: 4px
+
+  &__title
+    font-size: 18px
+    font-weight: 600
+    margin-bottom: 20px
+    color: $primary-color
+    
+  &__close-btn
+    display: none
+    position: absolute
+    top: 15px
+    right: 15px
+    width: 24px
+    height: 24px
+    cursor: pointer
+    
+    @include mobile
+      display: block
+      
+    span
+      position: relative
+      display: block
+      width: 100%
+      height: 2px
+      
+      &:before, &:after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 2px
+        background-color: $primary-color
+        left: 0
+        top: 0
+        
+      &:before
+        transform: rotate(45deg)
+        
+      &:after
+        transform: rotate(-45deg)
+
+  &__list
+    display: flex
+    flex-direction: column
+    gap: 15px
+
+  &__item
+    display: flex
+    justify-content: start
+    align-items: center
+    gap: 12px
+    
+  &__label
+    font-size: 12px
+    color: $text-color
+    text-transform: uppercase
+    
+  &__switch
+    position: relative
+    display: inline-block
+    width: 36px
+    height: 22px
+    
+  &__checkbox
+    opacity: 0
+    width: 0
+    height: 0
+    
+    &:checked + .toggle-filter__slider
+      background-color: $accent-color
+      
+      &:before
+        transform: translate(15px, -90%)
+    
+  &__slider
+    position: absolute
+    cursor: pointer
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: $btn-bg-color
+    transition: .4s
+    border-radius: 24px
+    
+    &:before
+      position: absolute;
+      content: "";
+      height: 8px;
+      width: 8px;
+      left: 5px;
+      bottom: 0px;
+      transform: translate(50%, -90%);
+      background-color: #000000;
+      transition: 0.4s;
+      border-radius: 50%;
+
+.mobile-only
+  @include tablet
+    display: none
+
+.products__filter-btn
+  background: transparent
+  display: none
+  padding: 10px 
+  border: none
+  border-radius: 6px
+  font-size: 12px
+  font-weight: 500
+  cursor: pointer
+  text-transform: uppercase
+  
+  @include mobile
+    display: inline-block
+
+body.filter-open
+  overflow: hidden
+  
+  &:after
+    content: ''
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0, 0, 0, 0.5)
+    z-index: 999 

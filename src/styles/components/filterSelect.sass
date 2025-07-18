@@ -1,0 +1,84 @@
+// Filter Select Component Styles
+
+.filter-select
+  position: relative
+  user-select: none
+  font-family: 'Inter', sans-serif
+  width: 237px
+  z-index: 7
+  
+  &__header
+    display: flex
+    align-items: center
+    justify-content: end
+    padding: 12px 3px 12px 16px
+    gap: 10px
+    cursor: pointer
+    transition: background 0.2s ease
+  
+  &__selected
+    font-size: 12px
+    font-weight: 500
+    text-transform: uppercase
+  
+  &__arrow
+    position: relative
+    width: 12px
+    height: 12px
+    
+    &:before, &:after
+      content: ''
+      position: absolute
+      width: 8px
+      height: 2px
+      background-color: $text-light-color
+      top: 5px
+      transition: transform 0.2s ease
+    
+    &:before
+      left: 0
+      transform: rotate(45deg)
+    
+    &:after
+      right: 0
+      transform: rotate(-45deg)
+  
+  &__dropdown
+    position: absolute
+    top: 0
+    left: 0
+    width: 237px
+    background: $secondary-color
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15)
+    overflow: hidden
+    max-height: 0
+    opacity: 0
+    transition: max-height 0.3s ease, opacity 0.2s ease
+    z-index: 20
+  
+  &__option
+    padding: 12px 16px
+    font-size: 14px
+    color: $text-color
+    text-transform: uppercase
+    cursor: pointer
+    transition: background 0.2s ease
+    
+    &:hover
+      background: darken($accent-color, 5%)
+    
+    &--selected
+      background: $accent-color
+      font-weight: 500
+  
+  &--open
+    .filter-select__dropdown
+      max-height: 220px
+      opacity: 1
+    
+    .filter-select__arrow
+      &:before
+        transform: rotate(-45deg)
+      
+      &:after
+        transform: rotate(45deg) 

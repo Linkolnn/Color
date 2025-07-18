@@ -1,0 +1,70 @@
+header.header 
+    button.burger-btn
+        span.burger-btn__line
+        span.burger-btn__line
+        span.burger-btn__line
+        
+    .header__logo
+        a(href="/")
+            img(src="/src/assets/images/logo.svg", alt="COLORS")
+    
+    .header__left-container
+        nav.header__nav
+            ul.header__nav-list
+                li.header__nav-item
+                    a.header__nav-link(href="#") Продукты
+                li.header__nav-item
+                    a.header__nav-link(href="#") Цвета
+                li.header__nav-item
+                    a.header__nav-link(href="#") Вдохновение
+                li.header__nav-item
+                    a.header__nav-link(href="#") Советы
+                li.header__nav-item
+                    a.header__nav-link(href="#") Найти магазин
+
+    .header__right-container
+        .header__contacts
+            a.header__contacts-link(href="tel:+74952217769") +7 (495) 221-77-69
+            p.header__contacts-text Заказать звонок
+
+        .header__menu 
+            button.header__search-button.header__menu-button
+                img(src="/src/assets/icons/search.svg", alt="search")
+            button.header__favorite-button.header__menu-button
+                img(src="/src/assets/icons/heart.svg", alt="favorite")
+            button.header__profile-button.header__menu-button
+                img(src="/src/assets/icons/profile.svg", alt="profile")
+            button.header__cart-button.header__menu-button
+                p.header__cart-count#cart-count 0
+    
+    .header__mobile-cart
+        button.header__cart-button.header__menu-button
+            p.header__cart-count.mobile-cart-count 0
+
+.mobile-menu
+    nav.mobile-menu__nav
+        ul.mobile-menu__nav-list
+            li.mobile-menu__nav-item
+                a.mobile-menu__nav-link(href="#") Продукты
+            li.mobile-menu__nav-item
+                a.mobile-menu__nav-link(href="#") Цвета
+            li.mobile-menu__nav-item
+                a.mobile-menu__nav-link(href="#") Вдохновение
+            li.mobile-menu__nav-item
+                a.mobile-menu__nav-link(href="#") Советы
+            li.mobile-menu__nav-item
+                a.mobile-menu__nav-link(href="#") Найти магазин
+    
+    .mobile-menu__contacts
+        a.mobile-menu__contacts-link(href="tel:+74952217769") +7 (495) 221-77-69
+        p.mobile-menu__contacts-text Заказать звонок
+    
+    .mobile-menu__buttons
+        button.header__search-button.header__menu-button
+            img(src="/src/assets/icons/search.svg", alt="search")
+        button.header__favorite-button.header__menu-button
+            img(src="/src/assets/icons/heart.svg", alt="favorite")
+        button.header__profile-button.header__menu-button
+            img(src="/src/assets/icons/profile.svg", alt="profile")
+
+.mobile-menu-overlay
