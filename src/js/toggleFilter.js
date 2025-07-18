@@ -84,7 +84,7 @@ const closeFilter = (filterContainer) => {
 };
 
 const handleDragStart = (e) => {
-  if (window.innerWidth >= 768) return;
+  if (window.innerWidth >= 859) return;
   
   isDragging = true;
   
@@ -105,7 +105,7 @@ const handleDragStart = (e) => {
 };
 
 const handleDragMove = (e) => {
-  if (!isDragging || window.innerWidth >= 768) return;
+  if (!isDragging || window.innerWidth >= 859) return;
   
   const filterContainer = document.querySelector('.toggle-filter');
   const currentY = e.type.includes('mouse') ? e.clientY : e.touches[0].clientY;
@@ -196,7 +196,7 @@ const handleResize = () => {
   
   if (!filterContainer) return;
   
-  if (window.innerWidth >= 768) {
+  if (window.innerWidth >= 859) {
     closeFilter(filterContainer);
   }
 }; 
