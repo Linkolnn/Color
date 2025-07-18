@@ -31,7 +31,7 @@ export const initCart = () => {
             <div class="cart-panel__header">
                 <h3 class="cart-panel__title">Корзина</h3>
                 <button class="cart-panel__close">
-                    <img src="/src/assets/icons/cross.svg" alt="Закрыть">
+                    <img src="/public/icons/cross.svg" alt="Закрыть">
                 </button>
             </div>
         `;
@@ -60,7 +60,7 @@ export const initCart = () => {
                             <span class="cart-item__quantity-num">${item.quantity}</span>
                             <button class="cart-item__quantity-btn">+</button>
                             <button class="cart-item__remove">
-                                <img src="/src/assets/icons/cross.svg" alt="Удалить">
+                                <img src="/public/icons/cross.svg" alt="Удалить">
                             </button>
                         </div>
                     </div>
