@@ -20,7 +20,7 @@ const initApp = async () => {
     const appContainer = document.querySelector('#app');
 
     try {
-      const mainHTML = await loadHTML('./dist/html/color.html');
+      const mainHTML = await loadHTML('/src/color.html');
       appContainer.innerHTML = mainHTML;
       
       await initSlider();
