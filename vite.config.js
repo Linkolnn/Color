@@ -1,13 +1,12 @@
-import { defineConfig } from 'vite'
-import pugPlugin from 'vite-plugin-pug'
+import { defineConfig } from 'vite';
+import path from 'path';
 
 export default defineConfig({
-  plugins: [
-    pugPlugin({
-      pretty: true
-    })
-  ],
-  build: {
-    outDir: 'dist'
-  }
-})
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'), // Псевдоним @ для папки src
+      '@js': path.resolve(__dirname, 'src/js'),
+      '@styles': path.resolve(__dirname, 'src/styles'), // Алиас для компонентов
+    },
+  },
+});

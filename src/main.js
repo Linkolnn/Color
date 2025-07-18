@@ -1,10 +1,10 @@
-import './styles/base/main.sass'
-import { initSlider } from './js/slider.js'
-import { initToggleFilter } from './js/toggleFilter.js'
-import { renderProducts } from './js/products.js'
-import { initFilterSelect } from './js/filterSelect.js'
-import { initCart } from './js/cart.js'
-import { initMobileMenu } from './js/mobileMenu.js'
+import '@styles/base/main.sass'
+import { initSlider } from '@js/slider.js'
+import { initToggleFilter } from '@js/toggleFilter.js'
+import { renderProducts } from '@js/products.js'
+import { initFilterSelect } from '@js/filterSelect.js'
+import { initCart } from '@js/cart.js'
+import { initMobileMenu } from '@js/mobileMenu.js'
 
 const loadHTML = async (url) => {
   try {
@@ -20,7 +20,7 @@ const initApp = async () => {
     const appContainer = document.querySelector('#app');
 
     try {
-      const mainHTML = await loadHTML('/src/color.html');
+      const mainHTML = await loadHTML('/dist/pages/color.html');
       appContainer.innerHTML = mainHTML;
       
       await initSlider();
